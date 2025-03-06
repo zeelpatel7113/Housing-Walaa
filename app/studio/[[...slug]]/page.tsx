@@ -1,9 +1,10 @@
-"use client"; 
-import { useParams } from 'next/navigation';
+// import { useRouter } from 'next/router';
+
+import { useRouter } from "next/navigation";
 
 export default function StudioPage() {
-  const params = useParams();
-  const slug = params?.slug; // `slug` will be an array if dynamic
+  const router = useRouter();
+  const { slug } = router.query;
 
   if (!slug) {
     return <div>Studio Home</div>;
