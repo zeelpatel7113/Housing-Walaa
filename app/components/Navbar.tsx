@@ -143,7 +143,7 @@ const Navbar = () => {
                   <Image 
                     src={Logo}
                     alt="Company Logo"
-                    className="h-8 w-auto rounded-md" 
+                    className="h-10 w-auto rounded-md mr-2" 
                   />
                 </Link>
 

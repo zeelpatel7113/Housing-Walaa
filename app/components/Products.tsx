@@ -191,7 +191,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center justify-between gap-2 md:gap-4 flex-wrap">
             {/* Location Filter */}
             <div className="relative">
               <button 

@@ -14,7 +14,7 @@ const Hero = () => {
   </div>
 
   {/* Hero Content */}
-  <div className="relative z-10 h-full flex flex-col items-start justify-center px-4 sm:px-6 lg:px-20">
+  <div className="relative z-10 h-full flex flex-col items-start justify-center px-2 sm:px-6 lg:px-20">
     <div className="max-w-2xl">
       <h2 className="text-blue-300 font-semibold text-lg sm:text-xl mb-2">
         Welcome to LuxuryHomes
@@ -31,9 +31,9 @@ const Hero = () => {
           Explore Properties
           <ArrowRight className="ml-2" size={18} />
         </button>
-        <button className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition duration-200 text-base font-semibold">
+        {/* <button className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white/10 transition duration-200 text-base font-semibold">
           Learn More
-        </button>
+        </button> */}
       </div>
     </div>
   </div>
