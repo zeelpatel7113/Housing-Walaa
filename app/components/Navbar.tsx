@@ -193,7 +193,7 @@ const Navbar = () => {
                 <a href={`tel:${PHONE_NUMBER}`}>
 
 
-                <Button className='bg-blue-700 hover:bg-blue-600'>
+                <Button className='bg-[#4089b0] hover:bg-[#367597]'>
                   Schedule Viewing
                 </Button>
                 </a>

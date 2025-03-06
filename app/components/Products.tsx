@@ -320,7 +320,7 @@ function App() {
 
             <button 
               onClick={clearFilters}
-              className="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-600"
+              className="px-4 py-2 bg-[#4089b0] hover:bg-[#367597] text-white rounded-lg "
             >
               Clear Filters
             </button>
