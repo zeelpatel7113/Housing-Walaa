@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import Logo from '@/public/hLogo.jpg';
+import Logo from '@/public/logolast.png';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -143,7 +143,7 @@ const Navbar = () => {
                   <Image 
                     src={Logo}
                     alt="Company Logo"
-                    className="h-10 w-auto rounded-md mr-2" 
+                    className="h-12 w-auto rounded-md mr-2" 
                   />
                 </Link>
 
