@@ -9,6 +9,7 @@ import {
   Square as SquareFeet,
   Building,
   MapIcon,
+  MessageCircle,
 } from "lucide-react";
 import Image from "next/image";
 import { urlForImage } from "@/sanity/lib/image";
@@ -28,6 +29,7 @@ interface Product {
   address: string;
   mapEmbeded: string;
   category: string[];
+  contact: string; // Added contact property
 }
 
 interface ProductDetailsProps {
@@ -44,6 +46,14 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       return `₹${(price / 100000).toFixed(2)} Lac`;
     }
     return `₹${price.toLocaleString()}`;
+  };
+  const handleWhatsAppClickSite = () => {
+    const defaultContact = "9510774987"; // Replace with your actual default contact number
+    const message = encodeURIComponent(
+      `Hi, I'm interested in ${product.name} located at ${product.location}. Price: ${formatPrice(product.price)}`
+    );
+    const contactNumber = product.contact || defaultContact;
+    window.open(`https://wa.me/91${contactNumber}?text=${message}`, '_blank');
   };
 
   return (
@@ -139,6 +149,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               </div>
             </div>
           </div>
+          <button
+          onClick={handleWhatsAppClickSite}
+           className="w-full bg-green-600 hover:bg-green-500 rounded-md shadow-md flex items-center justify-center py-4 gap-2 font-semibold text-white">
+            <MessageCircle className="w-5 h-5 text-white" />
+            Contect Us
+          </button>
 
           <div className="prose max-w-none">
             <h2 className="text-xl font-semibold mb-3">Description</h2>

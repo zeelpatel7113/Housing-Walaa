@@ -74,7 +74,7 @@ const Navbar = () => {
     <>
       <div className="sticky top-0 z-50 flex flex-col w-full  background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         {/* Top Bar */}
-        <div className="hidden md:block w-full bg-primary/5 border-b">
+        {/* <div className="hidden md:block w-full bg-primary/5 border-b">
           <div className="container mx-auto px-4 py-2">
             <div className="flex justify-end items-center space-x-6 text-sm">
               <a href={`tel:${PHONE_NUMBER}`} className="flex items-center space-x-2 hover:text-primary">
@@ -87,7 +87,7 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Navigation */}
         <nav className="w-full border-b bg-[#284b8e] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -178,7 +178,7 @@ const Navbar = () => {
                     </DropdownMenuContent>
                   </DropdownMenu> */}
                   <Button variant="ghost">About</Button>
-                  <Button variant="ghost">Contact</Button>
+                  {/* <Button variant="ghost">Contact</Button> */}
                 </div>
               </div>
 
@@ -194,7 +194,7 @@ const Navbar = () => {
 
 
                 <Button className='bg-[#4089b0] hover:bg-[#367597]'>
-                  Schedule Viewing
+                  Helpline
                 </Button>
                 </a>
               </div>

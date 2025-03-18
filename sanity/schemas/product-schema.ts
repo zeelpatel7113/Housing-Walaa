@@ -59,6 +59,14 @@ export const product = defineType({
             type: 'number'
         },
         {
+            name: 'contact',  // Changed from 'contect' to 'contact'
+            title: 'Contact Number',
+            type: 'string',  // Changed from 'number' to 'string' to preserve leading zeros
+            validation: Rule => Rule.required()
+                .regex(/^[0-9]{10}$/)
+                .error("Please enter a valid 10-digit phone number")
+        },
+        {
             name: 'possession',
             title: 'Possession',
             type: 'string',
