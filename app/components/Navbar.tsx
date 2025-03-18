@@ -178,7 +178,7 @@ const Navbar = () => {
                     </DropdownMenuContent>
                   </DropdownMenu> */}
                   <Button variant="ghost">About</Button>
-                  {/* <Button variant="ghost">Contact</Button> */}
+                  <Button variant="ghost">Contact</Button>
                 </div>
               </div>
 
