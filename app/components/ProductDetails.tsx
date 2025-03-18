@@ -153,7 +153,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           onClick={handleWhatsAppClickSite}
            className="w-full bg-green-600 hover:bg-green-500 rounded-md shadow-md flex items-center justify-center py-4 gap-2 font-semibold text-white">
             <MessageCircle className="w-5 h-5 text-white" />
-            Contect Us
+            Contact Us
           </button>
 
           <div className="prose max-w-none">
