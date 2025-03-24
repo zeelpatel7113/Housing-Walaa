@@ -146,7 +146,7 @@ const EMAIL = "infoxoras@gmail.com";
                   <Image 
                     src={Logo}
                     alt="Company Logo"
-                    className="h-12 w-auto rounded-md mr-2" 
+                    className="h-8 w-auto rounded-md mr-2" 
                   />
                 </Link>
 
