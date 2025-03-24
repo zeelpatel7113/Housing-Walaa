@@ -1,9 +1,28 @@
 import { authMiddleware } from "@clerk/nextjs";
 
-export default authMiddleware({
-  publicRoutes: ["/", "/sign-in", "/sign-up"], // Authentication pages and home page are accessible without authentication
+const middleware = authMiddleware({
+  publicRoutes: [
+    "/",
+    "/sign-in",
+    "/sign-up",
+    "/api/(.*)",
+    "/property/(.*)",
+    "/_next/(.*)",
+    "/images/(.*)"
+  ],
+  ignoredRoutes: [
+    "/api/(.*)",
+    "/_next/(.*)",
+    "/static/(.*)"
+  ],
+  debug: true
 });
 
+export default middleware;
+
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)"], // Ensures middleware runs for all non-static files
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+    "/"
+  ]
 };
