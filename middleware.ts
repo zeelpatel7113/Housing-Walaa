@@ -5,5 +5,6 @@ export default authMiddleware({
 });
 
 export const config = {
-  matcher: ["/((?!_next|.*\\..*).*)"], // Ensures middleware runs for all non-static files
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  runtime: 'nodejs',
 };
