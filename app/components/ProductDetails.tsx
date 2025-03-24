@@ -109,7 +109,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
               {product.category.map((cat, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-[#36759730] text-[#367597] rounded-full text-sm font-medium"
                 >
                   {cat.charAt(0).toUpperCase() + cat.slice(1)}
                 </span>
@@ -118,7 +118,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-6">
-            <div className="text-3xl font-bold text-blue-600 flex items-center">
+            <div className="text-3xl font-bold text-[#367597] flex items-center">
               {formatPrice(product.price)}
             </div>
 
@@ -151,7 +151,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
           </div>
           <button
           onClick={handleWhatsAppClickSite}
-           className="w-full bg-green-600 hover:bg-green-500 rounded-md shadow-md flex items-center justify-center py-4 gap-2 font-semibold text-white">
+           className="w-full bg-green-500 hover:bg-green-600 rounded-md shadow-md flex items-center justify-center py-4 gap-2 font-semibold text-white">
             <MessageCircle className="w-5 h-5 text-white" />
             Contact Us
           </button>

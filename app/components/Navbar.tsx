@@ -4,6 +4,7 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Logo from '@/public/logolast.png';
+import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -38,6 +39,9 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
+const Navbar = () => {
+  const { isSignedIn } = useUser();
+
 const categories = [
   { name: 'Residential', slug: 'residential', icon: Home, description: 'Houses, apartments, and condos' },
   { name: 'Commercial', slug: 'commercial', icon: Building2, description: 'Office spaces and retail' },
@@ -50,7 +54,6 @@ const PHONE_NUMBER = "+919510774987";
 const OFFICE_LOCATION = "https://maps.app.goo.gl/example";
 const EMAIL = "infoxoras@gmail.com";
 
-const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const handleCategoryClick = (slug: string) => {
@@ -184,18 +187,17 @@ const Navbar = () => {
 
               {/* Right Section */}
               <div className="flex items-center space-x-4">
-                {/* <a href={`tel:${PHONE_NUMBER}`}>
-
-                <Button variant="outline" className="hidden md:flex">
-                  List Your Property
-                </Button>
-                </a> */}
+                {isSignedIn ? (
+                  <UserButton afterSignOutUrl="/" />
+                ) : (
+                  <SignInButton mode="modal">
+                    <Button variant="outline">Login</Button>
+                  </SignInButton>
+                )}
                 <a href={`tel:${PHONE_NUMBER}`}>
-
-
-                <Button className='bg-[#4089b0] hover:bg-[#367597]'>
-                  Helpline
-                </Button>
+                  <Button className='bg-[#4089b0] hover:bg-[#367597]'>
+                    Helpline
+                  </Button>
                 </a>
               </div>
             </div>

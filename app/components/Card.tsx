@@ -1,7 +1,6 @@
 import React from 'react';
 import { Home, MapPin, IndianRupee, Clock } from 'lucide-react';
-import {  useRouter } from 'next/navigation';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 interface Property {
   slug: string;
@@ -30,16 +29,16 @@ const formatPrice = (price: number) => {
 };
 
 const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
-
   const router = useRouter();
 
   const handleClick = () => {
     router.push(`/property/${property.slug}`);
-  // Change `_id` if you have a `slug`
   };
+
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
-    onClick={handleClick}
+    <div 
+      className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
+      onClick={handleClick}
     >
       <img 
         src={property.images?.[0]?.asset?.url || 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600'} 
