@@ -7,17 +7,23 @@ export default authMiddleware({
     "/sign-up",
     "/api/webhook",
     "/api/user/details",
-    "/api/test-email"
+    "/api/test-email",
+    "/property/(.*)",  // Allow access to property pages without auth
+    "/_next/(.*)",     // Allow access to Next.js resources
+    "/images/(.*)",    // Allow access to images
+    "/api/(.*)"        // Allow access to all API routes
   ],
   ignoredRoutes: [
     "/api/webhook",
-    "/_next",
+    "/_next/(.*)",
     "/favicon.ico",
-    "/api/user/details",
-    "/api/test-email"
+    "/api/(.*)"
   ]
 });
 
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: [
+    "/((?!.*\\..*|_next).*)",
+    "/"
+  ]
 };
