@@ -146,7 +146,7 @@ const EMAIL = "infoxoras@gmail.com";
                   <Image 
                     src={Logo}
                     alt="Company Logo"
-                    className="h-8 w-auto rounded-md mr-2" 
+                    className="h-10 w-auto rounded-md mr-2" 
                   />
                 </Link>
 
@@ -186,7 +186,7 @@ const EMAIL = "infoxoras@gmail.com";
               </div>
 
               {/* Right Section */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
                 {isSignedIn ? (
                   <UserButton afterSignOutUrl="/" />
                 ) : (
